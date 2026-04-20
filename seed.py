@@ -1,9 +1,9 @@
 import sqlite3
 from faker import Faker
-from random import randint, choice
+from random import randint
 
 NUMBER_USERS = 5
-NUMBER_TASKS = 2
+NUMBER_TASKS = 10
 
 fake = Faker()
 
@@ -18,7 +18,7 @@ def generate_fake_data(number_users, number_tasks) -> tuple:
 
     # --- TASKS (без прив'язки поки) ---
     for _ in range(number_tasks):
-        fake_tasks.append((fake.sentence(nb_words=4), fake.text(max_nb_chars=200)))
+        fake_tasks.append((fake.sentence(nb_words=4), fake.text(max_nb_chars=50)))
 
     return fake_users, fake_tasks
 
@@ -77,12 +77,21 @@ if __name__ == "__main__":
 '''
 Після виконання скрипту БД буде заповнена фейковими даними, з якими ми можемо вже працювати та створювати запити.
 
-USERS: [('Gabriella Riley', 'tnash@example.org'), 
-('Tyler Johnson', 'lynn90@example.com')]
+USERS: [('Shawn Elliott', 'umoore@example.net'), 
+('Jill Clark', 'stephaniedavis@example.net'), 
+('William Brooks', 'hilldouglas@example.org'), 
+('Ryan Lee', 'david14@example.com'), 
+('Christopher Larson', 'paigejordan@example.com')] 
 
-STATUSES: [('new',), ('in progress',), ('completed',)]
+STATUS: [('new',), ('in progress',), ('completed',)]
 
-TASKS (first 5): 
-[('Adult hard take.', 'Me develop outside page clear admit size church. Treatment thank card sort.\nFinancial able social woman. Pattern its purpose dream.\nStory 
-tax trade maybe. Suggest value popular force issue.', 2, 1), 
-('Unit kid full some.', 'Your order collection while for. Through walk itself benefit think certainly enough institution.\nUntil society hundred forget meeting. Nothing several grow even property argue baby.', 3, 1)]'''
+TASKS: [('Compare open those.', 'Keep behind assume protect condition heavy.', 2, 3), 
+('Season specific ok increase report.', 'Build rich staff.', 2, 3), 
+('Score cause.', 'Around policy yourself strategy.', 3, 2), 
+('Office drug enjoy.', 'Serious lay television best.', 2, 1), 
+('Trip study.', 'Compare until simple development own.', 1, 2), 
+('Official different worker.', 'Should serious quickly start sport sometimes.', 3, 1), 
+('Serious amount reach.', 'Set work effect rest maybe. Difficult hot local.', 3, 3), 
+('Address far far realize.', 'Identify order central eight weight pass life.', 3, 1), 
+('Even adult itself.', 'Team citizen join performance prepare loss.', 1, 2), 
+('Show fast every purpose.', 'Think class employee actually cold mother about.', 2, 1)]'''
