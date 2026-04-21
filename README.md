@@ -54,12 +54,6 @@
 pip install poetry
 ```
 
-або:
-
-```
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
 ---
 
 ### 2. Встановити залежності
@@ -160,10 +154,6 @@ python select.py
 
 ## 📦 Залежності
 
-Всі залежності описані в `pyproject.toml`.
-
-Основна:
-
-* `faker`
+Залежності описані в `pyproject.toml` (`faker`)
 
 
