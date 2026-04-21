@@ -52,6 +52,10 @@
 
 ```
 pip install poetry
+
+or
+
+poetry init
 ```
 
 ---
@@ -59,7 +63,7 @@ pip install poetry
 ### 2. Встановити залежності
 
 ```
-poetry install
+poetry install --no-root
 ```
 
 ---
